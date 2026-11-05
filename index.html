@@ -16,8 +16,8 @@
         document.getElementById('btnlanzar').addEventListener('click', () => {
             const ancho = 400;
             const alto = 300;
-            const left = Math.floor((screen.width - ancho) / 2);
-            const top = Math.floor((screen.height - alto) / 2);
+            const left = Math.floor((screen.availWidth - ancho) / 2);
+            const top = Math.floor((screen.availHeight - alto) / 2);
             window.open('satelite.html', '_blank', `width=${ancho},height=${alto},left=${left},top=${top},toolbar=no`);
         })
     </script>
