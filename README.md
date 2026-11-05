@@ -1,1 +1,0 @@
-# 3.2.-Actividad-El-Sat-lite-del-BOM

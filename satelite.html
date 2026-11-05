@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventana satélite</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -55,34 +56,26 @@
             }
         });
 
-        /**
-         * HITO 3: Temporizador de cierre (Criterio e)
-         * Muestra una cuenta atrás de 5 segundos y luego cierra la ventana.
-         */
         document.getElementById("destruir").addEventListener("click", (evento) => {
             const SEGUNDOS = 5;
             let restantes = SEGUNDOS;
 
-            // Desactivar el botón para no lanzar varios temporizadores a la vez
             evento.target.disabled = true;
             mostrarCuentaAtras("Autodestrucción en " + restantes + "...");
 
-            // setInterval: actualiza el mensaje cada segundo
             const intervalo = setInterval(() => {
                 restantes--;
                 if (restantes > 0) {
                     mostrarCuentaAtras("Autodestrucción en " + restantes + "...");
                 } else {
-                    mostrarCuentaAtras('¡Boom! 💥');
+                    mostrarCuentaAtras("💥💥¡BOOOOOOOOOOM!💥💥");
                     clearInterval(intervalo);
                 }
             }, 1000);
 
-            // setTimeout: cierra la ventana al cumplirse el tiempo.
-            // window.close() funciona porque esta ventana se abrió con window.open()
             setTimeout(() => {
                 window.close();
-            }, SEGUNDOS * 1000);
+            }, (SEGUNDOS + 1) * 1000);
         });
 
         darBienvenida();

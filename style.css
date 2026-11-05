@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 4px 0;
+    width: 100%;
+    max-width: 260px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Botón de autodestrucción */
+#destruir {
+    background-color: #dc2626;
+}
+
+#destruir:hover {
+    background-color: #b91c1c;
+}
+
+#destruir:disabled {
+    background-color: #fca5a5;
+}
+
+/* Mensajes y estados */
+#bienvenida p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+#cuentaAtras {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #dc2626;
+    min-height: 1.2em;
+}
+
